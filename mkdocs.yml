@@ -1,1 +1,32 @@
-site_name: My Docs
+site_name: promptlibz
+
+theme:
+  name: "material"
+  features:
+    - navigation.tabs
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+plugins:
+  - search:
+      lang: en
+  - mkdocstrings # 自动搜索代码
+
+nav:
+  - Index: index.md
+  - Tutorial: 
+    - 正则表达式: re_.md
+    - 系统工具: system_.md
+    - 时间工具: time_.md
+    - 变量工具: variable_.md
+    - 文件工具: file.md
