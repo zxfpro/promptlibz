@@ -26,7 +26,3 @@ nav:
   - Index: index.md
   - Tutorial: 
     - 正则表达式: re_.md
-    - 系统工具: system_.md
-    - 时间工具: time_.md
-    - 变量工具: variable_.md
-    - 文件工具: file.md
