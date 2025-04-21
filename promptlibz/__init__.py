@@ -1,2 +1,2 @@
-# 专注于prompt 的存储和优化
-
+""" init """
+from .lib import TemplateFactory,TemplateType

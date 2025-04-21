@@ -25,4 +25,5 @@ plugins:
 nav:
   - Index: index.md
   - Tutorial: 
-    - 正则表达式: re_.md
+    - api_document: api_document.md
+    - use_case: use_case.md
