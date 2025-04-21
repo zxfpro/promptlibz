@@ -1,0 +1,1508 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../use_case/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>api_document - promptlibz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#promptlibz.lib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="promptlibz" class="md-header__button md-logo" aria-label="promptlibz" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            promptlibz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              api_document
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="promptlibz" class="md-nav__button md-logo" aria-label="promptlibz" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    promptlibz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorial
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    api_document
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    api_document
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      lib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib.TemplateFactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      TemplateFactory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib.TemplateType" class="md-nav__link">
+    <span class="md-ellipsis">
+      TemplateType
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use_case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    use_case
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      lib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib.TemplateFactory" class="md-nav__link">
+    <span class="md-ellipsis">
+      TemplateFactory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promptlibz.lib.TemplateType" class="md-nav__link">
+    <span class="md-ellipsis">
+      TemplateType
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>api_document</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="promptlibz.lib"></a>
+    <div class="doc doc-contents first">
+
+        <p>prompt lib</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="promptlibz.lib.TemplateFactory" class="doc doc-heading">
+            <code>TemplateFactory</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Template Factory</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>promptlibz/lib.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TemplateFactory</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Template Factory&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">template_type</span><span class="p">:</span> <span class="n">TemplateType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PromptTemplate</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">TemplateType</span><span class="p">]</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;analyze_template&#39;</span><span class="p">:</span>
+
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            让我们一步步从用户的模糊需求中分析出明确且具体的需求步骤：</span>
+
+<span class="s2">            第一步：提取用户表述中的关键词和重点内容。</span>
+<span class="s2">            第二步：将关键词和重点内容转化成具体的步骤和需求。</span>
+<span class="s2">            第三步：复核步骤和需求确保其明确具体且无二义性。</span>
+<span class="s2">            第四步：将上述步骤和需求整理成明确的需求描述。</span>
+
+<span class="s2">            用户需求表述：</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{user_statement}</span>
+<span class="s2">            ---</span>
+
+<span class="s2">            问题：请将上述用户需求表述转化为明确的需求描述。</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;canvas_template&#39;</span><span class="p">:</span>
+
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            我希望你充当一个格式转换器, 按照下面的格式进行转换:</span>
+<span class="s2">            我会输入一个API文档给你, 你应该按照以下规则进行转化, 我也会给你一些例子作为参考</span>
+
+<span class="s2">            规则:</span>
+<span class="s2">            ---</span>
+<span class="s2">            颜色:</span>
+<span class="s2">                函数:&quot;4&quot;</span>
+<span class="s2">                类:&quot;3&quot;</span>
+<span class="s2">                异步函数:&quot;5&quot;</span>
+<span class="s2">                属性: &quot;6&quot;</span>
+<span class="s2">            不同颜色的连线的含义</span>
+<span class="s2">                执行该函数从而返回该类: &quot;4&quot;</span>
+<span class="s2">                A类继承B类: 无</span>
+<span class="s2">            ---</span>
+
+
+<span class="s2">            例子:</span>
+<span class="s2">            ---</span>
+<span class="s2">            转换内容:</span>
+
+<span class="s2">            Launcher</span>
+<span class="s2">            pyppeteer.launcher.launch(options: dict = None, **kwargs) → pyppeteer.browser.Browser[source]</span>
+<span class="s2">            Start chrome process and return Browser.</span>
+
+<span class="s2">            This function is a shortcut to Launcher(options, **kwargs).launch().</span>
+
+<span class="s2">            Available options are:</span>
+
+<span class="s2">            ignoreHTTPSErrors (bool): Whether to ignore HTTPS errors. Defaults to False.</span>
+<span class="s2">            headless (bool): Whether to run browser in headless mode. Defaults to True unless appMode or devtools options is True.</span>
+<span class="s2">            executablePath (str): Path to a Chromium or Chrome executable to run instead of default bundled Chromium.</span>
+<span class="s2">            slowMo (int|float): Slow down pyppeteer operations by the specified amount of milliseconds.</span>
+<span class="s2">            args (List[str]): Additional arguments (flags) to pass to the browser process.</span>
+<span class="s2">            ignoreDefaultArgs (bool): Do not use pyppeteer’s default args. This is dangerous option; use with care.</span>
+<span class="s2">            handleSIGINT (bool): Close the browser process on Ctrl+C. Defaults to True.</span>
+<span class="s2">            handleSIGTERM (bool): Close the browser process on SIGTERM. Defaults to True.</span>
+<span class="s2">            handleSIGHUP (bool): Close the browser process on SIGHUP. Defaults to True.</span>
+<span class="s2">            dumpio (bool): Whether to pipe the browser process stdout and stderr into process.stdout and process.stderr. Defaults to False.</span>
+<span class="s2">            userDataDir (str): Path to a user data directory.</span>
+<span class="s2">            env (dict): Specify environment variables that will be visible to the browser. Defaults to same as python process.</span>
+<span class="s2">            devtools (bool): Whether to auto-open a DevTools panel for each tab. If this option is True, the headless option will be set False.</span>
+<span class="s2">            logLevel (int|str): Log level to print logs. Defaults to same as the root logger.</span>
+<span class="s2">            autoClose (bool): Automatically close browser process when script completed. Defaults to True.</span>
+<span class="s2">            loop (asyncio.AbstractEventLoop): Event loop (experimental).</span>
+<span class="s2">            appMode (bool): Deprecated.</span>
+<span class="s2">            Note</span>
+<span class="s2">            Pyppeteer can also be used to control the Chrome browser, but it works best with the version of Chromium it is bundled with. There is no guarantee it will work with any other version. Use executablePath option with extreme caution.</span>
+<span class="s2">            pyppeteer.launcher.connect(options: dict = None, **kwargs) → pyppeteer.browser.Browser[source]</span>
+<span class="s2">            Connect to the existing chrome.</span>
+
+<span class="s2">            browserWSEndpoint option is necessary to connect to the chrome. The format is ws://$</span><span class="si">{host}</span><span class="s2">:$</span><span class="si">{port}</span><span class="s2">/devtools/browser/&lt;id&gt;. This value can get by wsEndpoint.</span>
+
+<span class="s2">            Available options are:</span>
+
+<span class="s2">            browserWSEndpoint (str): A browser websocket endpoint to connect to. (required)</span>
+<span class="s2">            ignoreHTTPSErrors (bool): Whether to ignore HTTPS errors. Defaults to False.</span>
+<span class="s2">            slowMo (int|float): Slow down pyppeteer’s by the specified amount of milliseconds.</span>
+<span class="s2">            logLevel (int|str): Log level to print logs. Defaults to same as the root logger.</span>
+<span class="s2">            loop (asyncio.AbstractEventLoop): Event loop (experimental).</span>
+<span class="s2">            pyppeteer.launcher.executablePath() → str[source]</span>
+<span class="s2">            Get executable path of default chrome.</span>
+
+<span class="s2">            Browser Class</span>
+<span class="s2">            class pyppeteer.browser.Browser(connection: pyppeteer.connection.Connection, contextIds: List[str], ignoreHTTPSErrors: bool, setDefaultViewport: bool, process: Optional[subprocess.Popen] = None, closeCallback: Callable[[], Awaitable[None]] = None, **kwargs)[source]</span>
+<span class="s2">            Bases: pyee.EventEmitter</span>
+
+<span class="s2">            Browser class.</span>
+
+<span class="s2">            A Browser object is created when pyppeteer connects to chrome, either through launch() or connect().</span>
+
+<span class="s2">            browserContexts</span>
+<span class="s2">            Return a list of all open browser contexts.</span>
+
+<span class="s2">            In a newly created browser, this will return a single instance of [BrowserContext]</span>
+
+<span class="s2">            coroutine close() → None[source]</span>
+<span class="s2">            Close connections and terminate browser process.</span>
+
+<span class="s2">            coroutine createIncogniteBrowserContext() → pyppeteer.browser.BrowserContext[source]</span>
+<span class="s2">            [Deprecated] Miss spelled method.</span>
+
+<span class="s2">            Use createIncognitoBrowserContext() method instead.</span>
+
+<span class="s2">            coroutine createIncognitoBrowserContext() → pyppeteer.browser.BrowserContext[source]</span>
+<span class="s2">            Create a new incognito browser context.</span>
+
+<span class="s2">            This won’t share cookies/cache with other browser contexts.</span>
+
+<span class="s2">            browser = await launch()</span>
+<span class="s2">            # Create a new incognito browser context.</span>
+<span class="s2">            context = await browser.createIncognitoBrowserContext()</span>
+<span class="s2">            # Create a new page in a pristine context.</span>
+<span class="s2">            page = await context.newPage()</span>
+<span class="s2">            # Do stuff</span>
+<span class="s2">            await page.goto(&#39;https://example.com&#39;)</span>
+<span class="s2">            ...</span>
+<span class="s2">            coroutine disconnect() → None[source]</span>
+<span class="s2">            Disconnect browser.</span>
+
+<span class="s2">            coroutine newPage() → pyppeteer.page.Page[source]</span>
+<span class="s2">            Make new page on this browser and return its object.</span>
+
+<span class="s2">            coroutine pages() → List[pyppeteer.page.Page][source]</span>
+<span class="s2">            Get all pages of this browser.</span>
+
+<span class="s2">            Non visible pages, such as &quot;background_page&quot;, will not be listed here. You can find then using pyppeteer.target.Target.page().</span>
+
+<span class="s2">            process</span>
+<span class="s2">            Return process of this browser.</span>
+
+<span class="s2">            If browser instance is created by pyppeteer.launcher.connect(), return None.</span>
+
+<span class="s2">            targets() → List[pyppeteer.target.Target][source]</span>
+<span class="s2">            Get a list of all active targets inside the browser.</span>
+
+<span class="s2">            In case of multiple browser contexts, the method will return a list with all the targets in all browser contexts.</span>
+
+<span class="s2">            coroutine userAgent() → str[source]</span>
+<span class="s2">            Return browser’s original user agent.</span>
+
+<span class="s2">            Note</span>
+<span class="s2">            Pages can override browser user agent with pyppeteer.page.Page.setUserAgent().</span>
+<span class="s2">            coroutine version() → str[source]</span>
+<span class="s2">            Get version of the browser.</span>
+
+<span class="s2">            wsEndpoint</span>
+<span class="s2">            Return websocket end point url.</span>
+
+<span class="s2">            转换结果:</span>
+
+<span class="s2">            &#39;{</span><span class="se">\n</span><span class="s2">  &quot;edges&quot;: [</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;657303b566ee6e2e&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;2efc620dbe3c1331&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;54bff08a116e4a49&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;54bff08a116e4a49&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;a82325822bd67fb6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;c67c993c745b37e0&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;54bff08a116e4a49&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;5641488c54221b63&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;bec0d8c67dac720b&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;c67c993c745b37e0&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;c9389dd86f409516&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;top&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;bec0d8c67dac720b&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;8b46760ca9aafff8&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;top&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;cac3905b5dbd7aec&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;6930dd6efcfe22c5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;ffb5f39dcb1d0035&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;49590c97cf2bce72&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;87901b15f70c5419&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;b3263c6139ae433d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;ffb5f39dcb1d0035&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;6ea16715faac92f3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;ef50ac442c163ad3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;0f78fc09750b21ba&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;d5672e020eb1ab01&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;3e4ce809d293f027&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;1d3055f1f01bfd0d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;ef50ac442c163ad3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;45a37e74ada80dcb&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;94fc5d8fb8d9206e&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;d5672e020eb1ab01&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;113bd8fc1c6dfc8c&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;94fc5d8fb8d9206e&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;a6ec1edaffecbedb&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;a7eadc89526932ec&quot;,</span><span class="se">\n</span><span class="s2">      &quot;label&quot;: &quot;list&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;19d350c22cff8b8a&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;e6a1b690b5f05804&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;51bdecc33602917b&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;19d350c22cff8b8a&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;2272171aa68c4319&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;0e9cf235d823c638&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;87901b15f70c5419&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;1a2ed793c302f815&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;d9b66e51bb3668bc&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;d9b66e51bb3668bc&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;0193fc32e449697d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;label&quot;: &quot;list&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;b748946b6c3b7462&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;4aa36fdb75140c7d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;9a93a0822a5119ec&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3ef85b796461c349&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;24100ebc6df82e9b&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;ebf3fbce8a41db9d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;211830253acc4b69&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;e82dd6b8930dc31c&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;ebf3fbce8a41db9d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;fromNode&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;fromSide&quot;: &quot;right&quot;,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;fc7ef600565522fc&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">        &quot;pathfindingMethod&quot;: &quot;a-star&quot;</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;toNode&quot;: &quot;bc5e5afb1d2202d6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;toSide&quot;: &quot;left&quot;</span><span class="se">\n</span><span class="s2">    }</span><span class="se">\n</span><span class="s2">  ],</span><span class="se">\n</span><span class="s2">  &quot;nodes&quot;: [</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;54bff08a116e4a49&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;launcher&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -390,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -650</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;c67c993c745b37e0&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;launch&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -560</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;657303b566ee6e2e&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;pyppeteer&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -700,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -500</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;bec0d8c67dac720b&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;connect&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -680</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;cac3905b5dbd7aec&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;EventEmitter&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -660,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -40</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;3180d2a3fa2dfe4d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;Browser&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -350,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -220</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;2272171aa68c4319&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;disconnect&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 240</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;e6a1b690b5f05804&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;newPage&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 340</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;a6ec1edaffecbedb&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;pages&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 450</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;ef50ac442c163ad3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;createIncogniteBrowserContext()&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -60</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;d5672e020eb1ab01&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;createIncognitoBrowserContext()&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 60</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;4&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;d9b66e51bb3668bc&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;targets()&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 150</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;1d3055f1f01bfd0d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;browserContexts&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -240</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;ffb5f39dcb1d0035&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;close&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -160</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;9a93a0822a5119ec&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;process&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -310</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;94fc5d8fb8d9206e&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;BrowserContext&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: 380,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 10</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;b748946b6c3b7462&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;Target&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: 380,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 160</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;3&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;19d350c22cff8b8a&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;Page&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: 380,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 310</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;87901b15f70c5419&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: 380,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -90</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;ebf3fbce8a41db9d&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;str&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: 400,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 460</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;211830253acc4b69&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;version&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 680</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;5&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;3ef85b796461c349&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;userAgent&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: 560</span><span class="se">\n</span><span class="s2">    },</span><span class="se">\n</span><span class="s2">    {</span><span class="se">\n</span><span class="s2">      &quot;color&quot;: &quot;6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;height&quot;: 60,</span><span class="se">\n</span><span class="s2">      &quot;id&quot;: &quot;bc5e5afb1d2202d6&quot;,</span><span class="se">\n</span><span class="s2">      &quot;styleAttributes&quot;: {</span><span class="se">\n</span><span class="s2">      },</span><span class="se">\n</span><span class="s2">      &quot;text&quot;: &quot;wsEndpoint&quot;,</span><span class="se">\n</span><span class="s2">      &quot;type&quot;: &quot;text&quot;,</span><span class="se">\n</span><span class="s2">      &quot;width&quot;: 260,</span><span class="se">\n</span><span class="s2">      &quot;x&quot;: -30,</span><span class="se">\n</span><span class="s2">      &quot;y&quot;: -380</span><span class="se">\n</span><span class="s2">    }</span><span class="se">\n</span><span class="s2">  ]</span><span class="se">\n</span><span class="s2">}&#39;</span>
+
+<span class="s2">            ---</span>
+
+
+<span class="s2">            接下来, 帮我转换这个API文档内容:</span>
+
+<span class="s2">            &quot;&quot;&quot;</span>
+
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;summary_template&#39;</span><span class="p">:</span>
+
+            <span class="n">template</span>  <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            让我们一步步从下列对话文本中抽取有用信息做总结:</span>
+
+<span class="s2">            第一步: 思考哪些信息是有价值的? 并列举出来.</span>
+<span class="s2">            第二步: 思考内容是否可以提炼, 同时保证重要信息.</span>
+<span class="s2">            第三步: 分别用偏向理性的,偏向数据的,偏向感性的三种不同风格,将信息汇总并编撰笔记.内容要详实一些.</span>
+<span class="s2">            第四步: 将三种笔记结合其优点进行汇总成最终笔记</span>
+
+
+<span class="s2">            对话文本:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{chat_history}</span>
+<span class="s2">            ---</span>
+<span class="s2">            问题：请将上述对话文本汇总成笔记.</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;pandas_template&#39;</span><span class="p">:</span>
+            <span class="n">template</span>  <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            你是一个pandas的大师, 你需要根据你看到的df.sample(4) 的数据样例, 和用户的诉求, 编写对应的操作python代码来实现功能.</span>
+<span class="s2">            假设你可以直接操作名为df 的变量,它就是你看到的DataFrame.</span>
+<span class="s2">            你可以将你的输出打包成函数,这样用户更方便使用</span>
+
+<span class="s2">            数据样例(df.sample(4)):</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{data_sample}</span>
+<span class="s2">            ---</span>
+<span class="s2">            数据格式(df.info()):</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{data_info}</span>
+<span class="s2">            ---</span>
+<span class="s2">            用户诉求:</span>
+<span class="s2">            </span><span class="si">{prompt}</span>
+<span class="s2">            ---</span>
+<span class="s2">            输出python程序:</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;github_template&#39;</span><span class="p">:</span>
+
+
+            <span class="c1"># 定义提示模板字符串</span>
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            您是一个Python工程师, 现在我希望你可以按照以下的git diff 的输出结果,来编写一个</span>
+<span class="s2">            标准的git commit 提交信息.</span>
+<span class="s2">            编写的提交信息,应该要结合用户的表达和git commit 标准格式</span>
+
+
+<span class="s2">            git commit 标准格式:</span>
+<span class="s2">            ---</span>
+<span class="s2">            1. commitizen</span>
+<span class="s2">            AngularJS在 github上 的提交记录被业内许多人认可，逐渐被大家引用。</span>
+<span class="s2">            commit 格式规范</span>
+<span class="s2">            js 代码解读复制代码&lt;type类型&gt;(&lt;scope 可选作用域&gt;): &lt;subject 描述&gt;</span>
+<span class="s2">            &lt;BLANK LINE&gt;</span>
+<span class="s2">            &lt;body 可选的正文&gt;</span>
+<span class="s2">            &lt;BLANK LINE&gt;</span>
+<span class="s2">            &lt;footer 可选的脚注&gt;</span>
+
+<span class="s2">            大致主要分为三个部分（每个部分中间用空行分割）：</span>
+
+<span class="s2">            标题行: 必填, 描述主要修改类型和内容</span>
+<span class="s2">            主题内容: 描述为什么修改, 做了什么样的修改, 以及开发的思路等等</span>
+<span class="s2">            页脚注释: 可以写注释，BUG 号链接 或 Closed Issues</span>
+
+
+<span class="s2">            标题行中的type（必须）：commit 类型，只能填写如下类型：</span>
+
+
+<span class="s2">            feat: 新功能、新特性</span>
+<span class="s2">            fix: 修改 bug</span>
+<span class="s2">            perf: 更改代码，性能优化</span>
+<span class="s2">            refactor: 代码重构（重构，在不影响代码内部行为、功能下的代码修改）</span>
+<span class="s2">            docs: 文档修改</span>
+<span class="s2">            style: 代码格式修改, 注意不是 css 修改（例如分号修改）</span>
+<span class="s2">            test: 测试用例新增、修改</span>
+<span class="s2">            build: 影响项目构建或依赖项修改</span>
+<span class="s2">            revert: 恢复上一次提交</span>
+<span class="s2">            ci: 持续集成相关文件修改</span>
+<span class="s2">            chore: 其他修改（不在上述类型中的修改）</span>
+<span class="s2">            release: 发布新版本</span>
+<span class="s2">            workflow: 工作流相关文件修改</span>
+
+
+<span class="s2">            scope（可选）: 用于说明commit 影响的范围, 比如: global, common, route, component, utils, build...</span>
+<span class="s2">            subject: commit 的简短概述，不超过50个字符。</span>
+<span class="s2">            body: commit 具体修改内容, 可以分为多行。</span>
+<span class="s2">            footer: 一些备注, 通常是 BREAKING CHANGE 或修复的 bug 的链接。</span>
+
+<span class="s2">            例如如下示例：</span>
+<span class="s2">            js 代码解读复制代码// 示例1 </span>
+<span class="s2">            fix(global):修复checkbox不能复选的问题 </span>
+<span class="s2">            // 示例2 </span>
+<span class="s2">            fix(common): 修复头部区域logo问题</span>
+
+<span class="s2">            js 代码解读复制代码// 示例1 </span>
+<span class="s2">            feat: 添加资产管理模块</span>
+
+<span class="s2">            增加资产列表、搜索。</span>
+
+<span class="s2">            需求No.181 http://xxx.xxx.com/181。</span>
+
+<span class="s2">            约定式提交规范</span>
+<span class="s2">            内容来自(www.conventionalcommits.org/zh-hans/v1.…)</span>
+
+<span class="s2">            每个提交都必须使用类型字段前缀，它由一个名词组成，诸如 feat 或 fix ，其后接一个可选的作用域字段，以及一个必要的冒号（英文半角）和空格。</span>
+<span class="s2">            当一个提交为应用或类库实现了新特性时，必须使用 feat 类型。</span>
+<span class="s2">            当一个提交为应用修复了 bug 时，必须使用 fix 类型。</span>
+<span class="s2">            作用域字段可以跟随在类型字段后面。作用域必须是一个描述某部分代码的名词，并用圆括号包围，例如： fix(parser):</span>
+<span class="s2">            描述字段必须紧接在类型/作用域前缀的空格之后。描述指的是对代码变更的简短总结，例如： fix: array parsing issue when multiple spaces were contained in string.</span>
+<span class="s2">            在简短描述之后，可以编写更长的提交正文，为代码变更提供额外的上下文信息。正文必须起始于描述字段结束的一个空行后。</span>
+<span class="s2">            在正文结束的一个空行之后，可以编写一行或多行脚注。脚注必须包含关于提交的元信息，例如：关联的合并请求、Reviewer、破坏性变更，每条元信息一行。</span>
+<span class="s2">            破坏性变更必须标示在正文区域最开始处，或脚注区域中某一行的开始。一个破坏性变更必须包含大写的文本 BREAKING CHANGE，后面紧跟冒号和空格。</span>
+<span class="s2">            在 BREAKING CHANGE: 之后必须提供描述，以描述对 API 的变更。例如： BREAKING CHANGE: environment variables now take precedence over config files.</span>
+<span class="s2">            在提交说明中，可以使用 feat 和 fix 之外的类型。</span>
+<span class="s2">            工具的实现必须不区分大小写地解析构成约定式提交的信息单元，只有 BREAKING CHANGE 必须是大写的。</span>
+<span class="s2">            可以在类型/作用域前缀之后，: 之前，附加 ! 字符，以进一步提醒注意破坏性变更。当有 ! 前缀时，正文或脚注内必须包含 BREAKING CHANGE: description</span>
+
+<span class="s2">            ---</span>
+<span class="s2">            git diff info:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{git_diff}</span>
+<span class="s2">            ---</span>
+
+<span class="s2">            用户的表达:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{prompt}</span>
+<span class="s2">            ---</span>
+
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;py_simple_template&#39;</span><span class="p">:</span>
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            您是一个Python工程师, 现在我希望你可以负责 </span><span class="si">{py_name}</span><span class="s2"> 的代码维护和更新工作</span>
+
+<span class="s2">            您应该在尽可能少的改动代码的前提下, 满足新功能或改动诉求.</span>
+
+<span class="s2">            </span><span class="si">{py_name}</span><span class="s2"> 介绍:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{py_name}</span><span class="s2"> 的主要职能是:       </span><span class="si">{duty}</span>
+<span class="s2">            </span><span class="si">{py_name}</span><span class="s2"> 在整个工程中的位置是: </span><span class="si">{location}</span>
+<span class="s2">            </span><span class="si">{py_name}</span><span class="s2"> 与其他py的交互情况:  </span><span class="si">{interaction}</span>
+
+<span class="s2">            ---</span>
+
+<span class="s2">            </span><span class="si">{py_name}</span><span class="s2"> 全部代码:</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{py_content}</span>
+<span class="s2">            ```</span>
+
+<span class="s2">            用户的代码片段和要求:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{prompt}</span>
+<span class="s2">            ---</span>
+<span class="s2">            输出新的build函数:</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;py_simple_template2&#39;</span><span class="p">:</span>
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            你是一个python工程师, 这里有两段代码</span>
+<span class="s2">            一段是最初的代码, 有着可以执行的完整性.</span>
+<span class="s2">            第二段是 大模型编写的代码，其中由于大模型的注意力有限，而忽略或省去了一部分内容，现在我希望你将 第二段代码加入第一段代码</span>
+<span class="s2">            第一段代码:</span>
+<span class="s2">            ---</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{code1}</span>
+<span class="s2">            ```</span>
+<span class="s2">            ---</span>
+
+<span class="s2">            第二段代码</span>
+<span class="s2">            ---</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{code2}</span>
+<span class="s2">            ```</span>
+<span class="s2">            ---</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;create_template&#39;</span><span class="p">:</span>
+            <span class="n">template</span>  <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            请帮我根据以下代码生成一个对应的代码模版</span>
+
+<span class="s2">            例子1</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{case1}</span>
+<span class="s2">            ```</span>
+
+<span class="s2">            例子2</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{case2}</span>
+<span class="s2">            ```</span>
+
+<span class="s2">            模版:</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;template2code_template&#39;</span><span class="p">:</span>
+            <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            你是一个Python工程师, 我希望你可以根据模版,将用户提供的一些代码碎片整合成模版的形式</span>
+
+<span class="s2">            代码模版:</span>
+<span class="s2">            ```python</span>
+<span class="s2">            </span><span class="si">{python_code_template}</span>
+<span class="s2">            ```</span>
+
+<span class="s2">            用户的代码片段和要求:</span>
+<span class="s2">            ---</span>
+<span class="s2">            </span><span class="si">{prompt}</span>
+<span class="s2">            ---</span>
+<span class="s2">            输出新的build函数:</span>
+<span class="s2">            &quot;&quot;&quot;</span>
+
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;pandas3_template&#39;</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">template_type</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;pandas4_template&#39;</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown enum_type&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">PromptTemplate</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="n">template</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="promptlibz.lib.TemplateType" class="doc doc-heading">
+            <code>TemplateType</code>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="enum.Enum">Enum</span></code></p>
+
+
+        <p>template type</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>promptlibz/lib.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TemplateType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; template type&quot;&quot;&quot;</span>
+    <span class="n">ANALYZE</span> <span class="o">=</span> <span class="s1">&#39;analyze_template&#39;</span>
+    <span class="n">CANVAS</span> <span class="o">=</span> <span class="s1">&#39;canvas_template&#39;</span>
+    <span class="n">SUMMARY</span> <span class="o">=</span> <span class="s1">&#39;summary_template&#39;</span>
+    <span class="n">PANDAS</span> <span class="o">=</span> <span class="s2">&quot;pandas_template&quot;</span>
+    <span class="n">GITHUB</span> <span class="o">=</span> <span class="s2">&quot;github_template&quot;</span>
+    <span class="n">SIMPLEPY</span> <span class="o">=</span> <span class="s2">&quot;py_simple_template&quot;</span>
+    <span class="n">SIMPLEPY2</span> <span class="o">=</span> <span class="s2">&quot;py_simple_template2&quot;</span>
+    <span class="n">CREATETMP</span> <span class="o">=</span> <span class="s2">&quot;create_template&quot;</span>
+    <span class="n">TEMP2CODE</span> <span class="o">=</span> <span class="s2">&quot;template2code_template&quot;</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
