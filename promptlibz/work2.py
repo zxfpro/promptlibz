@@ -1,7 +1,9 @@
 from llama_index.core import PromptTemplate
+from llama_index.core.prompts import RichPromptTemplate
 
-class JudgeType:
-    template = """
+class JudgeType(PromptTemplate):
+    def __init__(self):
+        super().__init__(template = """
 我需要你将任务名归类为下列五类中的一类,我会提供输出格式案例.
 
 # 枚举类型:
@@ -21,12 +23,11 @@ class JudgeType:
 ---
 
 任务: {task}
-"""
-    prompt = PromptTemplate(template)
-    version = {'task':'','history':''}
+""")
 
-class GenerateSchedule:
-    template = """
+class GenerateSchedule(PromptTemplate):
+    def __init__(self):
+        super().__init__(template = """
 你是一个日程管理者, 擅长做日程安排并按照标准格式输出.
 
 有以下几点需要注意:
@@ -60,16 +61,11 @@ class GenerateSchedule:
 
 ---
 {text}
-"""
-    prompt = PromptTemplate(template)
-    version = {'habit':'',
-               'text':''}
+""")
 
-
-
-class ExtraText:
-    # print(ExtraText.prompt.format(**x))
-    template = """
+class ExtraText(PromptTemplate):
+    def __init__(self):
+        super().__init__(template = """
 我希望你可以对一个内容进行汇总和总结, 我会给你一段网页的内容，你来用一些简短的文字告诉我这篇内容的主要信息, 以及列出其中相关的重点和链接
 
 网页内容:
@@ -78,23 +74,39 @@ class ExtraText:
 ---
 {vvvc}
 输出信息:
-"""
-    prompt = PromptTemplate(template)
-    version = {'text':''}
+""")
 
 
-
-class Mermaid:
-    template = """
+class Mermaid(PromptTemplate):
+    def __init__(self):
+        super().__init__(template = """
 我们聊天的回答需要使用 Mermaid 语法, 
 只允许使用最简单的mermaid 语法
 首先定义结点, 再绘制连线, 不要使用修饰信息
 节点内容为执行步骤或任务, 要求明确且可实行 (使用动宾结构)   所有中文都要用引号
 
 {}
-"""
-    prompt = PromptTemplate(template)
-    version = {'text':''}
-    best_model = "gemini-2.5-flash-preview-04-17-thinking"
+""")
+        best_model = "gemini-2.5-flash-preview-04-17-thinking"
+
+
+class prompts(PromptTemplate):
+    def __init__(self):
+        super().__init__(template = """
+
+""")
+
+
+
+
+class Images(RichPromptTemplate):
+    
+    def __init__(self):
+        super().__init__(template_str = """
+Describe the following image:
+{{ image_path | image}}
+工作
+""")
+        
 
 
