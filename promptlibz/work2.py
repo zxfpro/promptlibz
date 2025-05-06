@@ -107,6 +107,3 @@ Describe the following image:
 {{ image_path | image}}
 工作
 """)
-        
-
-
