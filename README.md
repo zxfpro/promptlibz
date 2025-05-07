@@ -1,23 +1,3 @@
 # promptlib
- 一个prompt仓库
+用于管理prompt, 针对特定项目中特定环节的prompt, 提供 版本管理, 模型适配, 效果调试优化, 便捷使用等能力
 
-## 常规操作
-
-### 导出环境
-```
-uv export --format requirements-txt > requirements.txt
-```
-### 更新文档
-```
-mkdocs serve # 预览
-mkdocs gh-deploy -d ../.temp # 同步到github网站
-```
-### 发布
-```
-uv build
-uv publish
-```
-### 运行测试并同步到测试服务
-```
-bash run_test.sh
-```

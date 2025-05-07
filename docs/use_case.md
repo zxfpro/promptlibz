@@ -1,10 +1,9 @@
-
-
-
-## 使用factory 来调用prompt
+## promptlibz 的便捷使用
 
 ```python
-from promptlibz.lib import TemplateFactory,TemplateType
+from promptlibz import Templates, TemplateType
 
-TemplateFactory(TemplateType.GITHUB)
+prompt = Templates(TemplateType.JUDGETYPE)
+print(prompt.format())
+
 ```

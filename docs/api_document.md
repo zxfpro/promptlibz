@@ -1,3 +1,7 @@
+## prompt工厂
 
-::: promptlibz.lib
+::: promptlibz.core
 
+## prompt类
+
+::: promptlibz.prompts
