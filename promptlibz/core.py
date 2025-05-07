@@ -2,7 +2,7 @@
 from enum import Enum
 from .prompts import Prompt,RichPrompt
 from .prompts import Images
-from .prompts import JudgeType,GenerateSchedule,Notes,ExtraText,Mermaid,GitHelp
+from .prompts import JudgeType,GenerateSchedule,Notes,ExtraText,Mermaid,GitHelp,Estimate_duration
 
 
 class TemplateType(Enum):
@@ -13,6 +13,7 @@ class TemplateType(Enum):
     EXTRATEXT = "ExtraText"
     GITHELP = "GitHelp"
     MERMAID = "Mermaid"
+    ESTIMATE_DURATION = "Estimate_duration"
     RICH_IMAGES = "RichImages"
 
 class Templates:
@@ -41,6 +42,9 @@ class Templates:
         elif template_type.value == 'RichImages':
             # 定义提示模板字符串
             return Images()
+        elif template_type.value == 'Estimate_duration':
+            # 定义提示模板字符串
+            return Estimate_duration()
         elif template_type.value == 'Other':
             # 定义提示模板字符串
             return None

@@ -327,3 +327,20 @@ class GitHelp(Prompt):
             "project":"test",
             "version":1,
         }
+
+
+class Estimate_duration(Prompt):
+    """ Git commit 方法"""
+    def __init__(self):
+        super().__init__(template = """
+    估算时长
+    {task}
+                         "2P "
+    """)
+
+    def get_info(self):
+        return {
+            "adapted_models":["gemini-2.5-flash-preview-04-17-thinking"],
+            "project":"test",
+            "version":1,
+        }
