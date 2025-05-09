@@ -333,14 +333,23 @@ class Estimate_duration(Prompt):
     """ Git commit 方法"""
     def __init__(self):
         super().__init__(template = """
-    估算时长
-    {task}
-                         "2P "
+这里有一个任务, 我希望可以预测这个任务大概的耗时,耗时的表示规则如下:         
+
+耗时表示规则:
+使用 nP 来表示所用时间, n为整数, 最小是1P 为30分钟, 下面是一些示例  
+整理文件   输出: 
+2P
+修改冲突逻辑  输出: 
+1P
+    
+
+---                         
+{task}   输出:
     """)
 
     def get_info(self):
         return {
-            "adapted_models":["gemini-2.5-flash-preview-04-17-thinking"],
+            "adapted_models":["gemini-2.5-flash-preview-04-17-nothinking"],
             "project":"test",
             "version":1,
         }

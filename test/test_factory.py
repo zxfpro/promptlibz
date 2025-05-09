@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import pytest
 
 
-
+from llmada import BianXieAdapter
 
 from promptlibz import Templates, TemplateType
 
@@ -15,9 +15,15 @@ def test_Functionality():
 
 
 class Test_Performance():
-    def __init__(self):
-        pass
 
     def test_judgetype(self):
         # TODO
         prompt = Templates(TemplateType.JUDGETYPE)
+
+
+    def test_es(self):
+        prompt = Templates(TemplateType.ESTIMATE_DURATION)  
+        bx = BianXieAdapter()
+
+        print(bx.product(prompt.format(task = "打扫房间")))
+
