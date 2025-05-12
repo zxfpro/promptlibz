@@ -4,7 +4,7 @@ from .prompts import Prompt,RichPrompt
 from .prompts import Images
 from .prompts import JudgeType,GenerateSchedule,Notes,ExtraText,Mermaid,GitHelp,Estimate_duration
 
-
+from .prompts import ChatBox,MetaBox, MeetBox,memoryBox,DedaoExtract,Mermaid2canvas
 class TemplateType(Enum):
     """ template type"""
     JUDGETYPE = 'JudgeType'
@@ -15,6 +15,12 @@ class TemplateType(Enum):
     MERMAID = "Mermaid"
     ESTIMATE_DURATION = "Estimate_duration"
     RICH_IMAGES = "RichImages"
+    ChatBox = "ChatBox"
+    MetaBox = "MetaBox"
+    MeetBox = "MeetBox"
+    memoryBox = "memoryBox"
+    DedaoExtract = "DedaoExtract"
+    Mermaid2canvas = "Mermaid2canvas"
 
 class Templates:
     """Template Factory"""
@@ -45,9 +51,24 @@ class Templates:
         elif template_type.value == 'Estimate_duration':
             # 定义提示模板字符串
             return Estimate_duration()
-        elif template_type.value == 'Other':
+        elif template_type.value == 'ChatBox':
             # 定义提示模板字符串
-            return None
+            return ChatBox()
+        elif template_type.value == 'MetaBox':
+            # 定义提示模板字符串
+            return MetaBox()
+        elif template_type.value == 'MeetBox':
+            # 定义提示模板字符串
+            return MeetBox()
+        elif template_type.value == 'memoryBox':
+            # 定义提示模板字符串
+            return memoryBox()
+        elif template_type.value == 'DedaoExtract':
+            # 定义提示模板字符串
+            return DedaoExtract()
+        elif template_type.value == 'Mermaid2canvas':
+            # 定义提示模板字符串
+            return Mermaid2canvas()
         else:
             # 定义提示模板字符串
             return None

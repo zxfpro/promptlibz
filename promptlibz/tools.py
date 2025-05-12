@@ -1,4 +1,7 @@
 import re
+import pandas as pd
+import io
+
 
 def extract_python_code(text: str)->str:
     """从文本中提取python代码
@@ -26,10 +29,6 @@ def extract_type_code(text: str)->str:
     matches = re.findall(pattern, text)
     return matches[0].replace('\n','')
 
-
-
-import pandas as pd
-import io
 
 def dataframe_to_lm_string(df: pd.DataFrame, num_samples: int = 5, max_col_width: int = 50) -> str:
     """

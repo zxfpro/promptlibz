@@ -414,8 +414,6 @@ class MetaBox(Prompt):
         }
 
 
-
-
 class MeetBox(Prompt):
     """ Git commit 方法"""
     def __init__(self):
@@ -571,7 +569,7 @@ class memoryBox(Prompt):
         }
 
 
-class dedaoExtract(Prompt):
+class DedaoExtract(Prompt):
     """ Git commit 方法"""
     def __init__(self):
         super().__init__(template = """
@@ -646,3 +644,14 @@ c33706d5383115f7["各种函数"];
 
 # 人的记忆本质上就是各种记忆的大合集
     # 个人有个人的记忆 每个人都有相似或者相同的故事
+
+
+# 3 备忘录
+# 4 历史记录
+# 5 多重人格
+# 8 群体记忆
+# 自动化整理
+
+# 个人的主要意愿 (通过硬性条件)
+# 一些情感性的参考
+# 最终的MOE结构
