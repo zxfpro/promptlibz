@@ -571,6 +571,72 @@ class memoryBox(Prompt):
         }
 
 
+class dedaoExtract(Prompt):
+    """ Git commit 方法"""
+    def __init__(self):
+        super().__init__(template = """
+请从以下博文中精简准确地摘抄出最具核心价值的内容，并按照指定格式输出。
+
+1 新概念,核心概念,对应解释
+2 主要原理与论点
+3 相对肯定的统计性规律和结论
+4 作者重点强调的相当肯定的句子
+
+原则:
+要求精炼, 提纯
+尊重原文
+
+
+**输出格式：**
+
+```原文摘抄
+原文内容
+```
+
+原文:
+
+{text}
+""")
+    def get_info(self):
+        return {
+            "adapted_models":["gemini-2.5-flash-preview-04-17-nothinking"],
+            "project":"test",
+            "version":1,
+            "type":"prompt",
+        }
+
+
+
+class Mermaid2canvas(Prompt):
+    """ Git commit 方法"""
+    def __init__(self):
+        super().__init__(template = """
+严格按照这样的格式输出
+
+%%% CANVAS-DATA: {"version": "1.0"}
+graph TD;
+%% NODE: {"id": "393f8eb0f9209c2b", "x": -1180, "y": -300, "width": 260, "height": 60, "type": "text"}
+393f8eb0f9209c2b["各种知识"];
+%% NODE: {"id": "c33706d5383115f7", "x": -1180, "y": -180, "width": 260, "height": 60, "type": "text"}
+c33706d5383115f7["各种函数"];
+
+{text}
+""")
+    def get_info(self):
+        return {
+            "adapted_models":["gemini-2.5-flash-preview-04-17-nothinking"],
+            "project":"test",
+            "version":1,
+            "type":"prompt",
+        }
+
+
+
+
+
+
+
+
 
 
 
@@ -578,3 +644,5 @@ class memoryBox(Prompt):
 
 # 戴素方法
 
+# 人的记忆本质上就是各种记忆的大合集
+    # 个人有个人的记忆 每个人都有相似或者相同的故事
