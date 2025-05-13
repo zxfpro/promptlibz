@@ -605,8 +605,8 @@ class DedaoExtract(Prompt):
 
 
 
-class Mermaid2canvas(Prompt):
-    """ Git commit 方法"""
+class MerMaidChat(Prompt):
+    """ 输入Mermaid 大模型会思考,并将知识通过mermaid返回给他"""
     def __init__(self):
         super().__init__(template = """
 我希望我们通过mermaid 进行交流,
