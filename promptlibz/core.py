@@ -20,7 +20,7 @@ class TemplateType(Enum):
     MeetBox = "MeetBox"
     memoryBox = "memoryBox"
     DedaoExtract = "DedaoExtract"
-    Mermaid2canvas = "MerMaidChat"
+    MerMaidChat = "MerMaidChat"
 
 class Templates:
     """Template Factory"""
@@ -66,7 +66,7 @@ class Templates:
         elif template_type.value == 'DedaoExtract':
             # 定义提示模板字符串
             return DedaoExtract()
-        elif template_type.value == 'Mermaid2canvas':
+        elif template_type.value == 'MerMaidChat':
             # 定义提示模板字符串
             return MerMaidChat()
         else:
