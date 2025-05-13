@@ -609,8 +609,14 @@ class Mermaid2canvas(Prompt):
     """ Git commit 方法"""
     def __init__(self):
         super().__init__(template = """
-严格按照这样的格式输出
+我希望我们通过mermaid 进行交流,
+这是我当前的mermaid:    
+{input_mermaid}
 
+
+{text}
+
+我希望你将你的思想转化为可落地的步骤,并准寻输出格式输出, 示例如下:
 %%% CANVAS-DATA: {"version": "1.0"}
 graph TD;
 %% NODE: {"id": "393f8eb0f9209c2b", "x": -1180, "y": -300, "width": 260, "height": 60, "type": "text"}
@@ -618,7 +624,7 @@ graph TD;
 %% NODE: {"id": "c33706d5383115f7", "x": -1180, "y": -180, "width": 260, "height": 60, "type": "text"}
 c33706d5383115f7["各种函数"];
 
-{text}
+输出:
 """)
     def get_info(self):
         return {
@@ -637,15 +643,12 @@ c33706d5383115f7["各种函数"];
 
 
 
+# TODO
 
 # 发现问题。定位问题。 解决问题
-
 # 戴素方法
-
 # 人的记忆本质上就是各种记忆的大合集
     # 个人有个人的记忆 每个人都有相似或者相同的故事
-
-
 # 3 备忘录
 # 4 历史记录
 # 5 多重人格
