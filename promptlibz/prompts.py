@@ -624,6 +624,17 @@ graph TD;
 %% NODE: {"id": "c33706d5383115f7", "x": -1180, "y": -180, "width": 260, "height": 60, "type": "text"}
 c33706d5383115f7["各种函数"];
 
+其中 展示了如何使用颜色
+%% NODE: {"color": "4", "height": 60, "id": "ee8dc6c408ac3878", "styleAttributes": {}, "text": "\u5b8c\u6210", "type": "text", "width": 260, "x": -160, "y": -460}
+ee8dc6c408ac3878["完成"]:::styleee8dc6c408ac3878;
+classDef styleee8dc6c408ac3878 fill:#f9f,color:4;
+%% EDGE: {"color": "3", "fromNode": "393f8eb0f9209c2b", "fromSide": "top", "id": "1b13f19817283957", "styleAttributes": {"pathfindingMethod": "a-star"}, "toNode": "1b3b086f09fee501", "toSide": "bottom"}
+393f8eb0f9209c2b --> 1b3b086f09fee501;
+linkStyle 2 stroke:#f9f,color:3; 
+
+color: 2 代表阻塞
+color: 3 代表执行
+color: 4 代表完成         
 输出:
 """)
     def get_info(self):
